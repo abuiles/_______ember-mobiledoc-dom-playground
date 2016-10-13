@@ -1,0 +1,13 @@
+<div style="border: 1px">
+  {{yield}}
+</div>
+<div style="border: 1px">
+  {{#each model.data as |annotation|}}
+    <div style="margin-top: 10px;
+                border: 3px;
+                border-style: solid;
+                border-color: blue;">
+      {{render-mobiledoc mobiledoc=annotation.attributes.deltas cardNames=cardNames}}
+    </div>
+  {{/each}}
+</div>

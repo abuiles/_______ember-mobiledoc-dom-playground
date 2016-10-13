@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('annotation');
+  this.route('parent', function() {
+    this.route('child');
+  });
 });
 
 export default Router;
